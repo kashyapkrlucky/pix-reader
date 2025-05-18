@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h2.text-3xl.font-semibold.mb-6 OCR: Image to Text
+
+  form(action="/ocr" method="POST" enctype="multipart/form-data" class="mb-8")
+    input(type="file" name="image" accept="image/*" required class="bg-white p-2")
+    button(type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700") Convert
+
+  if text
+    h3.text-xl.font-semibold.mb-2 Result:
+    pre(class="bg-white p-4 rounded shadow whitespace-pre-wrap")= text

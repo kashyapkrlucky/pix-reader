@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title PixReader - OCR and Text-to-Image
+    // Tailwind CDN for styling
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css")
+    link(rel="icon", href="./public/favicon.ico")
+    script(rel="stylesheet", src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4")
+  body(class="bg-gray-100 min-h-screen flex flex-col")
+    include partials/header.pug
+
+    main(class="flex-grow container mx-auto px-4 py-8")
+      block content
+
+    include partials/footer.pug

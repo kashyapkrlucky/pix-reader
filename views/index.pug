@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .container.mx-auto.px-4.py-8
+    h1.text-3xl.font-bold.text-center.text-indigo-600.mb-6 PixReader
+    p.text-center.text-gray-600.mb-8
+      | A simple and elegant tool to extract text from images or generate text-based images.
+
+    .grid(class="grid-cols-1 md:grid-cols-2 gap-6")
+      // OCR Section
+      a(class="block bg-white shadow-lg transition p-6 rounded-xl border border-gray-200 hover:shadow-xl")(href="/ocr")
+        h2.text-xl.font-semibold.text-gray-800.mb-2 OCR - Image to Text
+        p.text-gray-600 Extract text from any image you upload.
+
+      // Text to Image Section
+      a(class="block bg-white shadow-lg transition p-6 rounded-xl border border-gray-200 hover:shadow-xl")(href="/text-to-image")
+        h2.text-xl.font-semibold.text-gray-800.mb-2 Text to Image
+        p.text-gray-600 Convert custom text and your name into a downloadable image.

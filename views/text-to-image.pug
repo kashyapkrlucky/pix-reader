@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  h2.text-3xl.font-semibold.mb-6 Text to Image
+
+  div(class="flex flex-row gap-2")
+    form(action="/text-to-image" method="POST" class="mb-8 w-2/3")
+      label.block.mb-2.font-semibold(for="username") Your Name
+      input(type="text" name="username" id="username" required placeholder="Your name" class="mb-4 bg-white p-2 rounded w-full max-w-md")
+
+      label.block.mb-2.font-semibold(for="text") Text to Display
+      textarea(name="text" id="text" rows="6" required placeholder="Enter text here..." class="mb-4 bg-white p-2 rounded w-full max-w-md")
+
+      button(type="submit" class="block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700") Generate Image
+    div(class="w-1/3")
+      if imageUrl
+        h3.text-xl.font-semibold.mb-2 Result:
+        img(src=imageUrl alt="Generated Image" class="border rounded max-w-md shadow")
+        a(href=imageUrl download class="inline-block mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700") Download Image
