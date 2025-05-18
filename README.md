@@ -33,6 +33,19 @@ PixReader is a sleek and simple OCR and text-to-image web app built with **Node.
 
 <br/>
 
+## Screenshots
+
+### Home Page
+![Home Page](./assets/home.png)
+
+### OCR - Image to Text
+![OCR Page](./assets/ocr.png)
+
+### Text to Image Generator
+![Text to Image](./assets/text-to-image.png)
+
+<br/>
+
 ## 📄 License
 
 This project is licensed under the MIT License.
