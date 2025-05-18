@@ -61,7 +61,11 @@ app.get("/text-to-image", (req, res) => {
 // Text-to-image POST (generate image)
 app.post("/text-to-image", async (req, res) => {
   const { username, text } = req.body;
+  const resultsDir = path.join(__dirname, "results");
 
+  if (!fs.existsSync(resultsDir)) {
+    fs.mkdirSync(resultsDir);
+  }
   const filename = `results/${username.replace(/\s+/g, "_")}-${Date.now()}.png`;
 
   // Create image with sharp
