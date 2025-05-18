@@ -18,7 +18,7 @@ PixReader is a sleek and simple OCR and text-to-image web app built with **Node.
 
 > 🚀 Deployed on [Render](https://render.com)
 
-[Live Demo](https://your-pixreader.render.com) _(replace with actual link)_
+[Live Demo](https://pix-reader.onrender.com)
 
 <br/>
 
